@@ -31,7 +31,7 @@ public class SaleServiceImpl implements SaleService {
     @Override
     public Sale updateSale(Sale sale, Long id) {
         Sale existingSale = getSaleById(id);
-        existingSale.setDate(sale.getDate());
+        existingSale.setSaleDate(sale.getSaleDate());
         existingSale.setProduct(sale.getProduct());
         existingSale.setCustomer(sale.getCustomer());
         return saleRepository.save(existingSale);

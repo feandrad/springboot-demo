@@ -1,4 +1,4 @@
-
+package com.example.demo.service;
 
 import com.example.demo.entity.Customer;
 import com.example.demo.repository.CustomerRepository;
@@ -34,7 +34,7 @@ public class CustomerServiceImpl implements CustomerService {
         existingCustomer.setName(customer.getName());
         existingCustomer.setEmail(customer.getEmail());
         existingCustomer.setCpf(customer.getCpf());
-        existingCustomer.setBirthDate(customer.getBirthDate());
+        existingCustomer.setDateOfBirth(customer.getDateOfBirth());
         existingCustomer.setAddress(customer.getAddress());
         return customerRepository.save(existingCustomer);
     }
